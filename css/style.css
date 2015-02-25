@@ -1,0 +1,57 @@
+@CHARSET "ISO-8859-1";
+* {
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+         white-space: nowrap;
+}
+
+.output{
+	font-size: xx-large;
+	font-style: italic;
+	font-weight: bolder;
+	font-family: sans-serif;
+}
+
+.cat-area {
+	vertical-align:top;
+	width: 50%;
+	display: inline-block;
+}
+.cat-container{
+	width: 50%;
+	display: inline-block;
+}
+
+.input-area{
+	width: 25%;
+	
+}
+input{
+	display:block;
+}
+.name, .cat-list {
+	font-size: large;
+	font-style: italic;
+	font-weight: bold;
+	font-family: erif;
+	color: blue;
+}
+
+li {
+	padding: .5em;
+	list-style-type: none;
+	display: inline;
+}
+
+.list-item {
+	display: inline-block;
+	background: #58FAAC;
+	margin: 1em;
+}
+
+form {
+	border:blue;
+}
+form > button {
+
+}
