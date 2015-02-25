@@ -27,7 +27,12 @@ var Cat=function(){
 var ViewModel=function(){
 	this.currentCat=ko.observable(new Cat());
 	this.incrementCounter=function(){
-		this.currentCat().clickCount(this.currentCat().clickCount()+1);
+		/*
+		we changed this line, because previously when we were clicking on cat,
+		we were in ViewModel Context. Since we create a new binding context with "with binding" inside div,
+		but now when you click the image you are in the binding contexct of the currentCat.
+		*/
+		this.clickCount(this.clickCount()+1);
 		};
 };
 
