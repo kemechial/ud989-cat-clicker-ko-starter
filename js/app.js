@@ -1,4 +1,4 @@
-var ViewModel=function(){
+var Cat=function(){
 	this.clickCount=ko.observable(0);
 	this.levelNames=ko.observableArray(["cute","sweet","adorable"]);
 	this.nickNames=ko.observableArray([
@@ -20,9 +20,14 @@ var ViewModel=function(){
 			return this.levelNames()[2];
 		}
 					
-	},this);
+	},this);	
+	
+};
+
+var ViewModel=function(){
+	this.currentCat=ko.observable(new Cat());
 	this.incrementCounter=function(){
-		this.clickCount(this.clickCount()+1);
+		this.currentCat().clickCount(this.currentCat().clickCount()+1);
 		};
 };
 
